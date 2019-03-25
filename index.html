@@ -4,6 +4,8 @@
 	<meta charset="utf-8">
 	<title>Let's get arrested!</title>
 	<script type="text/javascript">
+		var kaomojis;
+
 		window.onload = function() {
 
 
@@ -13,7 +15,7 @@
 			request.responseType = 'json';
 			request.send();
 			request.onload = function() {
-				var kaomojis = request.response;
+				kaomojis = request.response;
 				while (1) {
 					var kaomoji = kaomojis[Math.floor(Math.random() * kaomojis.length)].kaomoji;
 					var message = "ᵒᵒᵖˢᶦᵉ\n\n" + kaomoji + "\n\n\nTry and close me again :3";
