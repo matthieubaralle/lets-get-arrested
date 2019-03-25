@@ -14,14 +14,11 @@
 			request.send();
 			request.onload = function() {
 				var kaomojis = request.response;
-			}
-
-			// var kaomojis = JSON.parse('[{"kaomoji":"france"},{"kaomoji":"italia"},{"kaomoji":"usa"},{"kaomoji":"japan"},{"kaomoji":"uk"},{"kaomoji":"belgium"}]');
-
-			while (1) {
-				var kaomoji = kaomojis[Math.floor(Math.random() * kaomojis.length)].kaomoji;
-				var message = "ᵒᵒᵖˢᶦᵉ\n\n" + kaomoji + "\n\n\nTry and close me again :3";
-				alert(message);
+				while (1) {
+					var kaomoji = kaomojis[Math.floor(Math.random() * kaomojis.length)].kaomoji;
+					var message = "ᵒᵒᵖˢᶦᵉ\n\n" + kaomoji + "\n\n\nTry and close me again :3";
+					alert(message);
+				}
 			}
 		};
     </script>
